@@ -1,91 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio - Brenda Johana Gálvez Álvarez</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-  <!-- Header -->
-  <header class="text-white text-center py-6" style="background-color: rgb(180, 142, 216);">
-    <h1 class="text-3xl font-bold">Brenda Johana Gálvez Álvarez</h1>
-    <p class="text-lg">Estudiante de Ingeniería en Desarrollo y Gestión de Software</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio - Brenda Johana Gálvez Álvarez</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Main Content -->
-  <main class="container mx-auto my-10 px-4">
-    <div class="flex flex-col lg:flex-row lg:space-x-10 items-center lg:items-start mb-10">
-      <!-- Section: About Me -->
-      <section class="flex-1">
-        <h2 class="text-2xl font-bold text-center lg:text-left mb-4">Acerca de mí</h2>
-        <p class="text-center lg:text-left text-gray-700">
-          Soy una persona analítica y comprometida con los proyectos de desarrollo. Me especializo en identificar problemas y diseñar soluciones tecnológicas usando herramientas modernas.
-        </p>
-      </section>
-    
-      <!-- Section: Skills -->
-      <section class="flex-1">
-        <h2 class="text-2xl font-bold text-center lg:text-left mb-4">Habilidades</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
-          <div class="bg-white p-4 rounded shadow">HTML y CSS</div>
-          <div class="bg-white p-4 rounded shadow">Java</div>
-          <div class="bg-white p-4 rounded shadow">Flutter</div>
-          <div class="bg-white p-4 rounded shadow">React</div>
-          <div class="bg-white p-4 rounded shadow">MySQL</div>
-          <div class="bg-white p-4 rounded shadow">Spring</div>
-        </div>
-      </section>
-    </div>
-    
+    <link rel="stylesheet" href="styles.css" />
 
-    <!-- Section: Projects -->
-    <section>
-      <h2 class="text-2xl font-bold text-center mb-6">Proyectos</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card: Proyecto SGM-UTEZ -->
-        <div class="bg-white rounded-lg shadow">
-          <img src="https://via.placeholder.com/400x200" alt="Proyecto SGM-UTEZ" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">SGM-UTEZ</h3>
-            <p class="text-gray-700">
-              Desarrollo de BackEnd y base de datos para una aplicación web que automatiza procesos internos en la UTEZ.
-            </p>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          loop: true,
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 4,
+            },
+            768: {
+              slidesPerView: 5,
+            },
+          },
+        });
+      });
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <header
+      class="relative text-white py-12"
+      style="background-color: rgb(180, 142, 216)"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start lg:justify-between"
+      >
+        <!-- Contenedor del texto -->
+        <div class="lg:w-1/2 text-center lg:text-left">
+          <h1 class="text-3xl font-bold">Brenda Johana Gálvez Álvarez</h1>
+          <p class="text-lg mt-2">
+            Estudiante de Ingeniería en Desarrollo y Gestión de Software
+          </p>
+          <!-- Íconos de redes sociales -->
+          <div class="flex justify-center lg:justify-start space-x-4 mt-6">
+            <a
+              href="https://www.linkedin.com/in/brenda-johana-galvez-alvarez-60b10526b/"
+              target="_blank"
+              class="text-white text-2xl"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/joviicam"
+              target="_blank"
+              class="text-white text-2xl"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/joviicam/"
+              target="_blank"
+              class="text-white text-2xl"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
+          <!-- Botón de contacto -->
+          <button
+            class="mt-8 px-6 py-2 bg-yellow-500 text-white font-semibold rounded-full hover:bg-yellow-600 transition"
+          >
+            <a
+              href="/assets/CV_BJGA_IDyGS.pdf"
+              download="CV_Brenda_Johana_Galvez.pdf"
+            >
+              Descargar CV
+            </a>
+          </button>
         </div>
-        <!-- Card: Proyecto ExCLI -->
-        <div class="bg-white rounded-lg shadow">
-          <img src="https://via.placeholder.com/400x200" alt="Proyecto ExCLI" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">ExCLI</h3>
-            <p class="text-gray-700">
-              Desarrollo Fullstack y base de datos para una aplicación web enfocada en la gestión de datos escolares.
-            </p>
-          </div>
-        </div>
-        <!-- Card: Sitio Web UTEZ -->
-        <div class="bg-white rounded-lg shadow">
-          <img src="https://via.placeholder.com/400x200" alt="Sitio Web UTEZ" class="w-full rounded-t-lg">
-          <div class="p-4">
-            <h3 class="text-xl font-bold">Sitio Web UTEZ</h3>
-            <p class="text-gray-700">
-              Desarrollo Frontend para el sitio web oficial de la Universidad Tecnológica Emiliano Zapata.
-            </p>
+
+        <!-- Contenedor de la imagen -->
+        <div class="lg:w-1/3 mt-8 lg:mt-0 flex justify-center lg:justify-end">
+          <div
+            class="w-48 h-48 rounded-full overflow-hidden border-4 border-white"
+          >
+            <img
+              src="/assets/yo.jpg"
+              alt="Foto de Brenda"
+              class="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
-    </section>
-    <div class="text-center mt-6">
-      <a href="/assets/CV_BJGA_IDyGS.pdf" download="CV_Brenda_Johana_Galvez.pdf" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-        Descargar CV
-      </a>
-    </div>
-    
-  </main>
+    </header>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-4">
-    <p>&copy; 2024 Brenda Johana Gálvez Álvarez. Todos los derechos reservados.</p>
-  </footer>
-</body>
+    <!-- Main Content -->
+    <main class="container mx-auto my-10 px-4">
+      <div
+        class="flex flex-col lg:flex-row lg:space-x-10 items-center lg:items-start mb-10"
+      >
+        <!-- Section: About Me -->
+        <section class="flex-1">
+          <h2 class="text-2xl font-bold text-center lg:text-left mb-4">
+            Acerca de mí
+          </h2>
+          <p class="text-center lg:text-left text-gray-700">
+            Soy una persona analítica y comprometida con los proyectos de
+            desarrollo. Me especializo en identificar problemas y diseñar
+            soluciones tecnológicas usando herramientas modernas.
+          </p>
+        </section>
+
+        <!-- Section: Skills -->
+        <section class="flex-1">
+          <h2 class="text-2xl font-bold text-center lg:text-left mb-4">
+            Habilidades
+          </h2>
+
+          <!-- Grid de habilidades -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-center">
+            <div class="bg-white p-4 rounded shadow">HTML y CSS</div>
+            <div class="bg-white p-4 rounded shadow">Java</div>
+            <div class="bg-white p-4 rounded shadow">Flutter</div>
+            <div class="bg-white p-4 rounded shadow">Node.js</div>
+            <div class="bg-white p-4 rounded shadow">MySQL</div>
+            <div class="bg-white p-4 rounded shadow">Spring</div>
+            <div class="bg-white p-4 rounded shadow">JavaScript</div>
+            <div class="bg-white p-4 rounded shadow">ReactNative</div>
+            <div class="bg-white p-4 rounded shadow">TypeScript</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Section: Projects -->
+      <section>
+        <h2 class="text-2xl font-bold text-center mb-6">Proyectos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card: Proyecto SGM-UTEZ -->
+          <div
+            class="bg-white rounded-lg shadow"
+            onclick="window.location.href='https://devpost.com/software/hackathon-2023-ru59tb'"
+          >
+            <img
+              src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/616/579/datas/gallery.jpg"
+              alt="Proyecto SGM-UTEZ"
+              class="w-full rounded-t-lg"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">CLICKTEAM</h3>
+              <p class="text-gray-700">
+                Aplicación orientada a la innovación financiera, ayudando a los
+                usuarios a mejorar su historial y centrada en la característica
+                de pago en efectivo con OXXO Pay a través de la plataforma
+                Conekta.
+              </p>
+            </div>
+          </div>
+          <!-- Card: Proyecto ExCLI -->
+          <div
+            class="bg-white rounded-lg shadow"
+            onclick="window.location.href='https://www.utez.edu.mx/guia-de-expediente-clinico/'"
+          >
+            <img
+              src="https://www.utez.edu.mx/wp-content/uploads/2024/09/RegMed-1024x443.png"
+              alt="Proyecto ExCLI"
+              class="w-full rounded-t-lg"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">ExCLI</h3>
+              <p class="text-gray-700">
+                Desarrollo Fullstack y base de datos para una aplicación web
+                enfocada en la gestión de datos escolares.
+              </p>
+            </div>
+          </div>
+          <!-- Card: Sitio Web UTEZ -->
+          <div
+            class="bg-white rounded-lg shadow"
+            onclick="window.location.href='https://www.utez.edu.mx/'"
+          >
+            <img
+              src="/assets/utez.png"
+              alt="Sitio Web UTEZ"
+              class="w-full rounded-t-lg"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">Sitio Web UTEZ</h3>
+              <p class="text-gray-700">
+                Desarrollo Frontend para el sitio web oficial de la Universidad
+                Tecnológica Emiliano Zapata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+      <p>
+        &copy; 2024 Brenda Johana Gálvez Álvarez. Todos los derechos reservados.
+      </p>
+    </footer>
+  </body>
 </html>
